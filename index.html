@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>现代浏览器博物馆</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<style>
+body {
+  padding-top: 50px;
+  padding-bottom: 40px;
+  color: #5A5A5A;
+}
+.carousel {
+  margin-bottom: 60px;
+}
+.carousel, .carousel .item {
+  height: 500px;
+}
+.carousel .item {
+  background: #000;
+}
+.carousel img {
+  min-height: 500px;
+  width: 100%;
+}
+.carousel p {
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 1.8;
+}
+.desc {
+  line-height: 1.8;
+  height: 50px;
+}
+.divider {
+  margin: 40px 0;
+}
+.feature {
+  padding: 30px 0;
+}
+.feature-heading {
+  font-size: 50px;
+  color: #2A6496;
+}
+.feature-heading .small {
+  font-size: 28px;
+  color: #999;
+}
+@media screen and (max-width: 991px) {
+  .carousel {
+    margin-bottom: 30px;
+  }
+  .carousel, .carousel .item {
+    height: 300px;
+  }
+  .carousel img {
+    min-height: 300px;
+  }
+  .carousel p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .desc {
+    line-height: 1.4;
+    height: auto;
+  }
+  .feature-heading {
+    font-size: 34px;
+  }
+  .feature-heading .small {
+    font-size: 22px;
+  }
+  .feature-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .feature-heading {
+    margin-top: 120px;
+  }
+}
+</style>
+<!--[if lt IE 9]>
+  <script src="http://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="topbar">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">现代浏览器博物馆</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#carousel">综述 <span class="sr-only">(current)</span></a></li>
+        <li><a href="#summary">简述</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">特点 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#feature" data-tab="#chrome">Chrome</a></li>
+            <li><a href="#feature" data-tab="#firefox">Firefox</a></li>
+            <li><a href="#feature" data-tab="#safari">Safari</a></li>
+            <li><a href="#feature" data-tab="#opera">Opera</a></li>
+            <li><a href="#feature" data-tab="#ie">IE</a></li>
+          </ul>
+        </li>
+        <li><a href="#" data-toggle="modal" data-target="#about">关于</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="carousel" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel" data-slide-to="1"></li>
+    <li data-target="#carousel" data-slide-to="2"></li>
+    <li data-target="#carousel" data-slide-to="3"></li>
+    <li data-target="#carousel" data-slide-to="4"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="images/chrome-big.jpg" alt="1 slide:chrome">
+      <div class="carousel-caption">
+        <h1>Chrome</h1>
+        <p>Google Chrome是由Google开发的网页浏览器。</p>
+        <p><a href="http://www.google.cn/chrome/browser/desktop/index.html" class="btn btn-lg btn-primary" role="button" target="_blank">点我下载</a></p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/firefox-big.jpg" alt="2 slide:firefox">
+      <div class="carousel-caption">
+        <h1>Firefox</h1>
+        <p>Mozilla Firefox（简称Firefox），中文俗称火狐，是一个自由及开源的网页浏览器。</p>
+        <p><a href="https://www.mozilla.org/zh-CN/firefox/new/" class="btn btn-lg btn-primary" role="button" target="_blank">点我下载</a></p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/safari-big.jpg" alt="3 slide:safari">
+      <div class="carousel-caption">
+        <h1>Safari</h1>
+        <p>Safari是苹果公司所开发，并自带于OS X的网页浏览器。</p>
+        <p><a href="http://www.apple.com/cn/safari/" class="btn btn-lg btn-primary" role="button" target="_blank">点我下载</a></p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/opera-big.jpg" alt="4 slide:opera">
+      <div class="carousel-caption">
+        <h1>Opera</h1>
+        <p>Opera是由Opera软件公司所开发的网页浏览器。</p>
+        <p><a href="http://www.opera.com/zh-cn" class="btn btn-lg btn-primary" role="button" target="_blank">点我下载</a></p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/ie-big.jpg" alt="5 slide:ie">
+      <div class="carousel-caption">
+        <h1>IE</h1>
+        <p>Internet Explorer（简称IE或MSIE），是微软所开发的一系列图形用户界面网页浏览器。</p>
+        <p><a href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie" class="btn btn-lg btn-primary" role="button" target="_blank">点我下载</a></p>
+      </div>
+    </div>
+  </div>
+  <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<div class="container">
+  <div class="row text-center" id="summary">
+    <div class="col-md-4">
+      <img class="img-circle" src="images/chrome-logo-small.png" alt="chrome">
+      <h2>Chrome</h2>
+      <p class="desc">Google Chrome是由Google开发的网页浏览器。</p>
+      <p><a class="btn btn-default" href="http://www.google.cn/chrome/browser/desktop/index.html" role="button">点我下载</a></p>
+    </div>
+    <div class="col-md-4">
+      <img class="img-circle" src="images/firefox-logo-small.png" alt="firefox">
+      <h2>Firefox</h2>
+      <p class="desc">Mozilla Firefox（简称Firefox），中文俗称火狐，是一个自由及开源的网页浏览器。</p>
+      <p><a class="btn btn-default" href="https://www.mozilla.org/zh-CN/firefox/new/" role="button">点我下载</a></p>
+    </div>
+    <div class="col-md-4">
+      <img class="img-circle" src="images/safari-logo-small.png" alt="safari">
+      <h2>Safari</h2>
+      <p class="desc">Safari是苹果公司所开发，并自带于OS X的网页浏览器。</p>
+      <p><a class="btn btn-default" href="http://www.apple.com/cn/safari/" role="button">点我下载</a></p>
+    </div>
+  </div>
+  <hr class="divider">
+  <ul class="nav nav-tabs" role="tablist" id="feature">
+    <li role="presentation" class="active"><a href="#chrome" aria-controls="chrome" role="tab" data-toggle="tab">Chome</a></li>
+    <li role="presentation"><a href="#firefox" aria-controls="firefox" role="tab" data-toggle="tab">Firefox</a></li>
+    <li role="presentation"><a href="#safari" aria-controls="safari" role="tab" data-toggle="tab">Safari</a></li>
+    <li role="presentation"><a href="#opera" aria-controls="opera" role="tab" data-toggle="tab">Opera</a></li>
+    <li role="presentation"><a href="#ie" aria-controls="ie" role="tab" data-toggle="tab">IE</a></li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="chrome">
+      <div class="row feature">
+        <div class="col-md-7">
+          <h2 class="feature-heading">Google Chrome <span class="small">浏览速度更快</span></h2>
+          <p class="lead">Google Chrome是由Google开发的网页浏览器。中文名曾短暂用过“铬浏览器”， 后期中文名使用“酷容浏览器”。相应的开源计划名为Chromium，其采用BSD许可证授权并开放源代码，但Google Chrome本身是非自由软件，因此未开放源代码。</p>
+        </div>
+        <div class="col-md-5">
+          <img src="images/chrome-logo.png" alt="Chrome" class="feature-img img-responsive">
+        </div>
+      </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="firefox">
+      <div class="row feature">
+        <div class="col-md-5">
+          <img src="images/firefox-logo.png" alt="Firefox" class="feature-img img-responsive">
+        </div>
+        <div class="col-md-7">
+          <h2 class="feature-heading">Mozilla Firefox <span class="small">尽情地上网浏览</span></h2>
+          <p class="lead">Mozilla Firefox（简称Firefox），中文俗称火狐，是一个自由及开源的网页浏览器，由Mozilla基金会及其子公司Mozilla公司开发。Firefox支持Windows、OS X及Linux，其移动版支持Android及Firefox OS，这些版本的Firefox使用Gecko来排版网页。</p>
+        </div>
+      </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="safari">
+      <div class="row feature">
+        <div class="col-md-7">
+          <h2 class="feature-heading">Safari <span class="small">更智能，更强大</span></h2>
+          <p class="lead">Safari是苹果公司所开发，并自带于OS X的网页浏览器。Safari在2003年1月7日首度发行测试版，并从Mac OS X v10.3开始成为OS X的默认浏览器，也是iOS自带的默认浏览器。Safari使用苹果自家的WebKit来进行网页排版及运行JavaScript。</p>
+        </div>
+        <div class="col-md-5">
+          <img src="images/safari-logo.png" alt="Safari" class="feature-img img-responsive">
+        </div>
+      </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="opera">
+      <div class="row feature">
+        <div class="col-md-5">
+          <img src="images/opera-logo.png" alt="Opera" class="feature-img img-responsive">
+        </div>
+        <div class="col-md-7">
+          <h2 class="feature-heading">Opera <span class="small">快速又安全</span></h2>
+          <p class="lead">Opera是由Opera软件公司所开发的网页浏览器。最新版本可用于Microsoft Windows、OS X和Linux操作系统，并使用Blink排版引擎。而早期版本则使用Presto排版引擎。</p>
+        </div>
+      </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="ie">
+      <div class="row feature">
+        <div class="col-md-7">
+          <h2 class="feature-heading">IE <span class="small">逐渐走入历史</span></h2>
+          <p class="lead">Internet Explorer（旧称Microsoft Internet Explorer和Windows Internet Explorer，简称IE或MSIE），是微软所开发的一系列图形用户界面网页浏览器。自从1995年开始，自带在各个新版本的Windows作业系统作为默认浏览器，也是微软Windows操作系统的一个组成部分。</p>
+        </div>
+        <div class="col-md-5">
+          <img src="images/ie-logo.png" alt="IE" class="feature-img img-responsive">
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="divider">
+  <footer>
+    <p class="pull-left">&copy; 2016 xxx</p>
+    <p class="pull-right"><a href="#">回到顶部</a></p>
+  </footer>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="modal-label" aria-hidden="true" id="about">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">关于</h4>
+      </div>
+      <div class="modal-body">
+        <p>慕课网隶属于北京慕课科技中心(有限合伙)，是一家从事互联网免费教学的网络教育公司。秉承“开拓、创新、公平、分享”的精神， 将互联网特性全面的应用在教育领域，致力于为教育机构及求学者打造一站式互动在线教育品牌。</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">了解了</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+'use strict';
+$(function() {
+  $('#navbar a').click(function(e) {
+    let href = $(this).attr('href');
+    let tabId = $(this).attr('data-tab');
+    if ('#' !== href) {
+      e.preventDefault();
+      $(document).scrollTop($(href).offset().top - 70);
+      if (tabId) {
+        $(href).find('a[href="' + tabId + '"]').tab('show');
+      }
+    }
+  });
+});
+</script>
+</body>
+</html>
