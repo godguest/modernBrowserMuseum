@@ -1,2 +1,7 @@
-# modernBrowserMuseum
-modern browser museum demo by bootstrap
+# Modern browser museum
+
+Modern browser museum demo by bootstrap
+
+## Live demo
+
+https://godguest.github.io/modernBrowserMuseum/
